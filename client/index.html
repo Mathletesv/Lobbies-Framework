@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Lobbies</title>
+		<style>
+			* {
+				margin-left: 10px;
+				margin-right: 10px;
+				background-color: #ccebff;
+			}
+			
+			#roomlist, .roomtop, #maintop, .top {
+				justify-content: space-around;
+				text-align: center;
+			}
+
+			button {
+				color: white;
+				background-color: #4CAF50;
+				padding: 15px 32px;
+				font-size: 16px;
+				border: 2px solid #4CAF50;
+				border-radius: 8px;
+				transition-duration: .5s;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+
+			button:hover {
+				color: #4CAF50;
+				background-color: white;
+			}
+
+			input[type=text] {
+				background-color: white;
+				padding: 12px 20px;
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+				font-size: 16px;
+			}
+
+			input[type=text]:focus {
+				border: 1px solid #555;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align: center">Lobbies Framework</h1><br>
+		<div id="maintop">
+			<button id="namechange" class="top">Change Username</button>
+			<span id="hello" class="top">Hello, </span>
+		</div><br>
+		<div id="roomlist">
+			<input type="text" id="idinput" class="roomtop" placeholder="Enter id...">
+			<button id="idjoiner" class="roomtop">Join Room</button>
+			<button id="creator" class="roomtop">Create Room</button>
+			<input type="text" id="search" class="roomtop" placeholder="Search by name..."><br>
+			<div id="rooms">
+				<!-- Template With and Without Pass
+				<div id=[roomid] class="room">
+					<span class="roomname">[game name]</span>
+					<button class="roomjoin>Join Room</button>
+				</div>
+				<div id=[roomid] class="room">
+					<span class="roomname">[game name]</span>
+					<input type="text" id=roomid + "pass" class="roompass" placeholder="Enter pass...">
+					<button class="roomjoin>Join Room</button>
+				</div>
+				-->
+			</div>
+		</div>
+		<div id="room" style="display: none">bye</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="client/client.js"></script>
+	</body>
+</html>
